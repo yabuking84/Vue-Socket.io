@@ -146,6 +146,17 @@ export default new Vuex.Store({
     }
 })
 ```
+<p>Example, if you have an emitter on your Socket.IO named "supplierNewQuoteCreated", on your VUEX module you should name your actions as "SOCKERT_supplierNewQuoteCreated"</p>
+``` javascript
+actions: {
+	...
+    // supplierNewQuoteCreated
+    SOCKET_supplierNewQuoteCreated(context, data){
+        context.commit('UPDATE_NOTIFICATIONS_M',data);        
+    },
+    ...
+}
+```
 
 ## Stargazers over time
 
